@@ -8,4 +8,9 @@ set(HEADER_FILES include/lib.h)
 
 configure_file(include/original.h.in include/original.h)
 
-add_executable(Main src/main.cxx)
+add_executable(
+  ${PROJECT_NAME}
+  src/main.cxx
+)
+
+target_include_directories(Cake PUBLIC "${PROJECT_BINARY_DIR}/include")
