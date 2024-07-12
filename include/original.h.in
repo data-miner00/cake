@@ -1,0 +1,7 @@
+#ifndef REPLACE_H
+#define REPLACE_H
+
+#define Cake_VERSION_MAJOR @Cake_VERSION_MAJOR@
+#define Cake_VERSION_MINOR @Cake_VERSION_MINOR@
+
+#endif

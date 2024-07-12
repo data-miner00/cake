@@ -1,4 +1,4 @@
-#include "../includes/lib.h"
+#include "lib.h"
 
 int sample() {
     return 42;
