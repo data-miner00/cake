@@ -9,12 +9,19 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 
 configure_file(include/original.h.in include/original.h)
 
+add_subdirectory(library)
+
 add_executable(
   ${PROJECT_NAME}
   src/main.cxx
 )
 
-target_include_directories(Cake PUBLIC "${PROJECT_BINARY_DIR}/include")
+target_link_libraries(Cake PUBLIC library)
+target_include_directories(
+  Cake PUBLIC
+  "${PROJECT_BINARY_DIR}/include"
+  "${PROJECT_SOURCE_DIR}/library"
+)
 
 if (PROJECT_IS_TOP_LEVEL AND UNIX)
   # Create symlink to compile_commands.json
