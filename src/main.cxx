@@ -10,6 +10,6 @@ int main(int argc, char** argv) {
     const double inputValue = std::stod(argv[1]);
     std::cout << inputValue + 1.4 << std::endl;
     std::cout << Cake_VERSION_MAJOR << std::endl;
-    std::cout << getZero() << std::endl;
+    std::cout << "Zero" << getZero() << std::endl;
     peace out;
 }
