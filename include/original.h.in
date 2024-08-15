@@ -1,7 +1,10 @@
 #ifndef REPLACE_H
 #define REPLACE_H
 
+// Macro constants injected from CMake
 #define Cake_VERSION_MAJOR @Cake_VERSION_MAJOR@
 #define Cake_VERSION_MINOR @Cake_VERSION_MINOR@
+#define Cake_VERSION_PATCH @Cake_VERSION_PATCH@
+#define Cake_VERSION_TWEAK @Cake_VERSION_TWEAK@
 
 #endif
