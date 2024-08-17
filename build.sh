@@ -3,5 +3,16 @@ function createDirIfNotExist() {
   [ -d "$directory" ] || mkdir -p "$directory"
 }
 
-createDirIfNotExist "path/to/dir"
+createDirIfNotExist "build"
 
+cd build
+
+echo "Current working directory: $(pwd)"
+
+cmake ..
+
+cmake --build .
+
+echo "Done building, executing binary.."
+
+./Cake 3.14
