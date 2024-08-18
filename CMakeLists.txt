@@ -32,7 +32,8 @@ configure_file(
 
 # Adds a subdirectory to be included in the build
 # The output will also be named `library` but in the build folder.
-add_subdirectory(library)
+set(LIBRARY_NAME "library")
+add_subdirectory(${LIBRARY_NAME})
 
 # Declares the executable
 add_executable(
@@ -44,12 +45,12 @@ add_executable(
 )
 
 target_link_libraries(
-  ${PROJECT_NAME}
-  PUBLIC library
+  ${PROJECT_NAME} PUBLIC
+  ${LIBRARY_NAME}
 )
 
 target_include_directories(
-  Cake PUBLIC
+  ${PROJECT_NAME} PUBLIC
   "${PROJECT_BINARY_DIR}/include"
   "${PROJECT_SOURCE_DIR}/library"
 )
