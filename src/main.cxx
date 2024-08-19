@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <fmt/core.h>
 
 #include "original.h"
 #include "lib1.h"
@@ -24,5 +25,8 @@ int main(int argc, char** argv) {
 
     // From lib1.h and lib2.h
     std::cout << "0 + 1 = " << getZero() + getOne() << std::endl;
+
+    // Using external library 'fmt'
+    fmt::print("Hello from fmt\n");
     peace out;
 }

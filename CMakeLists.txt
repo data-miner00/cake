@@ -30,6 +30,9 @@ configure_file(
   include/original.h
 )
 
+# Finds the external fmt library
+find_package(fmt)
+
 # Adds a subdirectory to be included in the build
 # The output will also be named `library` but in the build folder.
 set(LIBRARY_NAME "library")
@@ -47,6 +50,7 @@ add_executable(
 target_link_libraries(
   ${PROJECT_NAME} PUBLIC
   ${LIBRARY_NAME}
+  fmt::fmt
 )
 
 target_include_directories(
