@@ -21,6 +21,7 @@ int main(int argc, char** argv) {
     // From original.h
     std::cout << "Current program major version: " << Cake_VERSION_MAJOR << std::endl;
     std::cout << "Current program tweak version: " << Cake_VERSION_TWEAK << std::endl;
+    std::cout << "Author: " << Cake_AUTHOR_NAME << std::endl;
     std::cout << "\n";
 
     // From lib1.h and lib2.h

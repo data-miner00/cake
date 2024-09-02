@@ -15,4 +15,4 @@ cmake --build .
 
 echo "Done building, executing binary.."
 
-./Cake 3.14
+./Cake ${1:-3.14}

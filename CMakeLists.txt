@@ -11,9 +11,12 @@ project(
   LANGUAGES CXX
 )
 
+set(AUTHOR_NAME shaun)
+
 # Enabling C++11 features
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 
 set(HEADER_FILES include/lib.h)
@@ -30,7 +33,8 @@ configure_file(
   include/original.h
 )
 
-# Finds the external fmt library
+# Finds the external fmt library (https://fmt.dev)
+# pacman -S fmt
 find_package(fmt)
 
 # Adds a subdirectory to be included in the build
