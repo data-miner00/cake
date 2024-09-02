@@ -18,9 +18,6 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-
-set(HEADER_FILES include/lib.h)
-
 # For clangd to pick up
 set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 
