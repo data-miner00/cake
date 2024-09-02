@@ -11,6 +11,8 @@
 constexpr int out = 0;
 
 int main(int argc, char** argv) {
+    srand(time(NULL));
+
     // Gets a string from argument and try convert to float.
     const double inputValue = std::stod(argv[1]);
     std::cout << inputValue << " + 1.4 = ";
@@ -25,9 +27,12 @@ int main(int argc, char** argv) {
     std::cout << "\n";
 
     // From lib1.h and lib2.h
-    std::cout << "0 + 1 = " << getZero() + getOne() << std::endl;
+    number_t sum = getZero() + getOne() + (rand() % 10);
+    std::cout << "0 + 1 + ? = " << sum << std::endl;
 
     // Using external library 'fmt'
-    fmt::print("Hello from fmt\n");
+    text_t welcome = "Hello from fmt\n";
+    fmt::print(welcome);
+
     peace out;
 }

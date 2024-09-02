@@ -1,7 +1,9 @@
 #ifndef LIBRARY_LIB1
 #define LIBRARY_LIB1
+#include <string>
 
-#define LIBCONST 88
+typedef std::string text_t;
+using number_t = int;
 
 int getZero();
 
