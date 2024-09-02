@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <fmt/core.h>
 
+#include "bubble_sort.h"
 #include "original.h"
 #include "lib1.h"
 #include "lib2.h"
@@ -11,6 +12,7 @@
 constexpr int out = 0;
 
 int main(int argc, char** argv) {
+    const int out = 999;
     srand(time(NULL));
 
     // Gets a string from argument and try convert to float.
@@ -34,5 +36,25 @@ int main(int argc, char** argv) {
     text_t welcome = "Hello from fmt\n";
     fmt::print(welcome);
 
-    peace out;
+    // Sorting array
+    int array[] = { 83, 123, 4, 45, 8, 2, 95, 18, 54 };
+    bubble_sort(array, sizeof(array)/sizeof(int));
+
+    for (auto element : array) {
+         std::cout << element << ' ';
+    }
+
+    std::cout << '\n';
+
+    // Pointers
+    text_t* addr = &welcome;
+    text_t* invalid = nullptr;
+
+    // Heap alloc
+    int* persist = new int;
+    *persist = 33;
+    delete persist;
+
+    // Global out
+    peace ::out;
 }
