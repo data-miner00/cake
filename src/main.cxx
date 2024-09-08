@@ -12,6 +12,7 @@
 constexpr int out = 0;
 
 int main(int argc, char** argv) {
+    const int octal = 0123;
     const int out = 999;
     srand(time(NULL));
 
@@ -54,6 +55,15 @@ int main(int argc, char** argv) {
     int* persist = new int;
     *persist = 33;
     delete persist;
+
+    // template usage
+    std::cout << getSelf(53) << '\n';
+
+    int int_default {};
+    std::cout << int_default << '\n';
+
+    int brance_init(500);
+    std::cout << brance_init << '\n';
 
     // Global out
     peace ::out;
