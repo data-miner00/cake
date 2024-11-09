@@ -71,3 +71,15 @@ if (PROJECT_IS_TOP_LEVEL AND UNIX)
   )
 endif()
 
+
+message(STATUS "The project ${PROJECT_NAME} has been built successfully")
+
+# Run cmake -S . -B build
+# cmake --build build -j 12 (threads on machine)
+
+# Use FORCE to always update CMakeCache.txt with this value and ignore the command line argument if passed in
+set(BAR "bar" CACHE STRING "a dummy value" FORCE)
+message(STATUS "Bar check: ${BAR}")
+
+# CACHE INTERNAL will hide the variable from the user, so it will not show during build and CMake GUIs
+set(HIDDEN "bar" CACHE INTERNAL "")
