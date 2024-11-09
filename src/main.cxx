@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <fmt/core.h>
 
-#include "bubble_sort.h"
 #include "original.h"
 #include "lib1.h"
 #include "lib2.h"
@@ -30,40 +29,12 @@ int main(int argc, char** argv) {
     std::cout << "\n";
 
     // From lib1.h and lib2.h
-    number_t sum = getZero() + getOne() + (rand() % 10);
+    int sum = getZero() + getOne() + (rand() % 10);
     std::cout << "0 + 1 + ? = " << sum << std::endl;
 
     // Using external library 'fmt'
-    text_t welcome = "Hello from fmt\n";
+    std::string welcome = "Hello from fmt\n";
     fmt::print(welcome);
-
-    // Sorting array
-    int array[] = { 83, 123, 4, 45, 8, 2, 95, 18, 54 };
-    bubble_sort(array, sizeof(array)/sizeof(int));
-
-    for (auto element : array) {
-         std::cout << element << ' ';
-    }
-
-    std::cout << '\n';
-
-    // Pointers
-    text_t* addr = &welcome;
-    text_t* invalid = nullptr;
-
-    // Heap alloc
-    int* persist = new int;
-    *persist = 33;
-    delete persist;
-
-    // template usage
-    std::cout << getSelf(53) << '\n';
-
-    int int_default {};
-    std::cout << int_default << '\n';
-
-    int brance_init(500);
-    std::cout << brance_init << '\n';
 
     // Global out
     peace ::out;

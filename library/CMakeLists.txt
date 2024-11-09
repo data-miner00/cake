@@ -6,7 +6,6 @@ add_library(
 
   lib1.cxx
   lib2.cxx
-  bubble_sort.cxx
 )
 
 if (USE_LIB2)
