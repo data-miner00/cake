@@ -13,6 +13,11 @@ project(
 
 set(AUTHOR_NAME shaun)
 
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Debug CACHE STRING "" FORCE)
+endif()
+message(STATUS "CMAKE_BUILD_TYPE is ${CMAKE_BUILD_TYPE}")
+
 # Enabling C++11 features
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -20,6 +25,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # For clangd to pick up
 set(CMAKE_EXPORT_COMPILE_COMMANDS True)
+
+# Build static libs
+set(BUILD_SHARED_LIBS False)
 
 # File replacement
 configure_file(
